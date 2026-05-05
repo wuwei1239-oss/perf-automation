@@ -1,0 +1,12 @@
+{
+  "build": {
+    "builder": "NIXPACKS",
+    "buildCommand": "pip install -r requirements.txt"
+  },
+  "deploy": {
+    "startCommand": "python app_feishu_form.py",
+    "healthcheckPath": "/health",
+    "restartPolicyType": "ON_FAILURE",
+    "region": "us-west4"
+  }
+}
